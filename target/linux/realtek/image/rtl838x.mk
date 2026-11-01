@@ -305,6 +305,15 @@ define Device/netgear_gs310tp-v1
 endef
 TARGET_DEVICES += netgear_gs310tp-v1
 
+define Device/netgear_gs310tp-v2
+  $(Device/netgear_nge)
+  DEVICE_MODEL := GS310TP
+  DEVICE_VARIANT := v2
+  UIMAGE_MAGIC := 0x4e474547
+  DEVICE_PACKAGES += kmod-i2c-gpio kmod-pse-realtek-mcu-i2c
+endef
+TARGET_DEVICES += netgear_gs310tp-v2
+
 define Device/panasonic_m16eg-pn28160k
   SOC := rtl8382
   IMAGE_SIZE := 16384k
