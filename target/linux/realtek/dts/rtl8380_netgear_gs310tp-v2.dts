@@ -77,7 +77,7 @@
 		#size-cells = <0>;
 
 		pse: ethernet-pse@20 {
-			compatible = "netgear,gs310tp-v2-pse", "realtek,pse-mcu-gen1-smbus";
+			compatible = "netgear,gs310tp-v2-pse", "realtek,pse-mcu-gen1-i2c";
 			reg = <0x20>;
 			/* RTL8231 pin 10 gates all ports; the bootloader leaves it asserted, the driver releases it once the MCU has answered, as the vendor firmware does */
 			disable-ports-gpios = <&gpio1 10 GPIO_ACTIVE_LOW>;
