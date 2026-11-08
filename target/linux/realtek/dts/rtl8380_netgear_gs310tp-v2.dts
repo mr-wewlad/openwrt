@@ -110,7 +110,7 @@
 &phy15 { pses = <&pse_pi7>; };
 
 &firmware {
-	openwrt,ih-magic = <0x4e474335>;
+	openwrt,ih-magic = <0x4e474547>;
 };
 
 &switch0 {
