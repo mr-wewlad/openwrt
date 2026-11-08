@@ -67,6 +67,7 @@
 		tx-disable-gpios = <&gpio1 8 GPIO_ACTIVE_HIGH>;
 	};
 
+/*
 	/* The PoE MCU *may* be a NUC029ZAN along with a BCM59136B0KMLG */
 	i2c_poe: i2c-poe {
 		compatible = "i2c-gpio";
@@ -97,6 +98,7 @@
 			};
 		};
 	};
+*/
 };
 
 /* Copper ports lan1..lan8 (phy8..phy15) -> MCU PoE ports 0..7 */

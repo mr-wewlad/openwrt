@@ -310,7 +310,6 @@ define Device/netgear_gs310tp-v2
   DEVICE_MODEL := GS310TP
   DEVICE_VARIANT := v2
   UIMAGE_MAGIC := 0x4e474547
-  DEVICE_PACKAGES += kmod-i2c-gpio kmod-pse-realtek-mcu-i2c
 endef
 TARGET_DEVICES += netgear_gs310tp-v2
 
