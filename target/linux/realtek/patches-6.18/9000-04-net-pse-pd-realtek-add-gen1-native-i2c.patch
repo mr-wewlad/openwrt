@@ -1,0 +1,16 @@
+diff --git a/drivers/net/pse-pd/realtek-pse-mcu-core.c b/drivers/net/pse-pd/realtek-pse-mcu-core.c
+index 9443154..2b94dd1 100644
+--- a/drivers/net/pse-pd/realtek-pse-mcu-core.c
++++ b/drivers/net/pse-pd/realtek-pse-mcu-core.c
+@@ -1046,6 +1046,11 @@ static int rtpse_mcu_discover(struct rtpse_mcu_ctrl *pse, struct rtpse_mcu_info
+ 	case RTPSE_MCU_DEVICE_ID_BCM59121:
+ 		pse->chip = &bcm59121_info;
+ 		break;
++	case 0xe1ff:
++		/* GS310TPv2: newer MCU firmware reports 0xE1FF for the same
++		 * BCM59121 PSE the v1 uses; validate by powering a PD. */
++		pse->chip = &bcm59121_info;
++		break;
+ 	default:
+ 		return dev_err_probe(pse->dev, -EINVAL, "unknown PSE id 0x%x\n",
+ 				     info->device_id);
